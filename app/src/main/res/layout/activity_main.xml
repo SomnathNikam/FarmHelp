@@ -12,8 +12,39 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="14dp">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/inputbg"
+                app:autoShowKeyboard="true"
+                
+                app:queryBackground="@color/teal_200"
+                app:queryHint="Search here ..."
+                app:iconifiedByDefault="false"
+                android:inputType="text"/>
+        </androidx.cardview.widget.CardView>
+        <ListView
+            android:id="@+id/Listview_searchbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="60dp"/>
 
     </FrameLayout>
 

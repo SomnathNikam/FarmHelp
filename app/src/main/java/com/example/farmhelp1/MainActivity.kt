@@ -3,19 +3,31 @@ package com.example.farmhelp1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.ArrayAdapter
+import android.widget.SearchView
 import androidx.fragment.app.Fragment
+
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.farmhelp1.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var searchView: SearchView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
         replaceFragment(Home())
+
+        val ArrayList = arrayOf("Deepak", "Amit", "Somnath", "Abhijeet", "Manisha")
+        val arrayAdapter: ArrayAdapter<*>
+        arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,ArrayList)
+        binding.ListviewSearchbar.adapter = arrayAdapter
 
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId){
@@ -24,13 +36,17 @@ class MainActivity : AppCompatActivity() {
                 R.id.schemes -> replaceFragment(schemes())
                 R.id.about_us -> replaceFragment(About())
                 else -> {
-
+                        true
                 }
             }
             true
         }
 
+
     }
+
+
+
     private fun replaceFragment(fragment: Fragment){
 
         val fragmentManager = supportFragmentManager
