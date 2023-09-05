@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/inputbg"
                 app:autoShowKeyboard="true"
-                
+
                 app:queryBackground="@color/teal_200"
                 app:queryHint="Search here ..."
                 app:iconifiedByDefault="false"
