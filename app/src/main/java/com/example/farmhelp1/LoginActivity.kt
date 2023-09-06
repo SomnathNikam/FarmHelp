@@ -4,23 +4,25 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
+
+
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        val register = findViewById<Button>(R.id.register)
-        val login = findViewById<Button>(R.id.login)
+        // ...
+// Initialize Firebase Auth
+        //auth = Firebase.auth
+        
+        
+        
 
-        register.setOnClickListener {
-            val i = Intent(applicationContext,RegisterActivity::class.java)
-            startActivity(i)
-            finish()
-        }
-        login.setOnClickListener {
-            val i = Intent(applicationContext,RegisterActivity::class.java)
-            startActivity(i)
-            finish()
-        }
     }
 }

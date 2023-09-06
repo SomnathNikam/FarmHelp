@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "165452236999",
+    "project_id": "farmhelp1-aaea3",
+    "storage_bucket": "farmhelp1-aaea3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165452236999:android:28ab8a9f1c65c7f81e56e2",
+        "android_client_info": {
+          "package_name": "com.example.farmhelp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165452236999-jl321han0eho9h2ob0j5e02342d6fv64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1vV0jsMufebawYSa5_OHaAVfUJZucBQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165452236999-jl321han0eho9h2ob0j5e02342d6fv64.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
