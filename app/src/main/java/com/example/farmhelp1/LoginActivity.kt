@@ -1,8 +1,10 @@
 package com.example.farmhelp1
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.example.farmhelp1.databinding.ActivityLoginBinding
@@ -31,9 +33,10 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
-                   //     Log.d(TAG, "signInWithEmail:success")
-                        val user = auth.currentUser
-                        Toast.makeText(this,task.result.toString(),Toast.LENGTH_LONG).show()
+
+                       Log.d(TAG, "signInWithEmail:success")
+                        val user =auth.currentUser
+                        Toast.makeText(this," "+user.toString(),Toast.LENGTH_LONG).show()
 
 
                     } else {
