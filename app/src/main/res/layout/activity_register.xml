@@ -41,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
+                android:id="@+id/txSts1"
                 android:textIsSelectable="true"
                 android:background="@drawable/inputbg"
                 android:hint="Name" />
@@ -54,10 +55,12 @@
             app:startIconDrawable="@drawable/ic_baseline_person_24">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txSts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/inputbg"
-                android:hint="Gender" />
+                android:hint="Phone No"
+                android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
