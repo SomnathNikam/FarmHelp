@@ -4,6 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_login"
     tools:context=".OTP_activity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/verifyotp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        app:endIconMode="clear_text"
+
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/verifyotp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/inputbg"
+            android:hint="Verify"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+
+        android:text="Verify OTP" />
+
+
 
 </LinearLayout>

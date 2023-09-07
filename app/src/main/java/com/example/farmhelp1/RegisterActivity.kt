@@ -42,6 +42,7 @@ class RegisterActivity : AppCompatActivity() {
             userInfo.toString()
 
 
+
         }
     }
 }
