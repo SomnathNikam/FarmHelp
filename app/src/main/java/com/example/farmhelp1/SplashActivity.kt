@@ -12,7 +12,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val splash = findViewById<ImageView>(R.id.farmlogo)
+
 
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
             startActivity(Intent(this,SplashAnimActivity3::class.java))

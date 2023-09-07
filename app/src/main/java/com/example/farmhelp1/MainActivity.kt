@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.schemes -> replaceFragment(schemes())
                 R.id.about_us -> replaceFragment(About())
                 else -> {
-                        true
+
                 }
             }
             true
