@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="150dp"
             app:cardElevation="14dp">
 
 
@@ -32,19 +32,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/inputbg"
+                android:inputType="text"
+                app:cardCornerRadius="10dp"
+                app:useDrawerArrowDrawable="true"
+                app:goIcon="@drawable/baseline_keyboard_voice_24"
+                app:voiceIcon="@drawable/baseline_keyboard_voice_24"
                 app:autoShowKeyboard="true"
-
-                app:queryBackground="@color/teal_200"
-                app:queryHint="Search here ..."
                 app:iconifiedByDefault="false"
-                android:inputType="text"/>
+                app:queryHint="Search here ...">
+
+            </androidx.appcompat.widget.SearchView>
+
         </androidx.cardview.widget.CardView>
+
         <ListView
             android:id="@+id/Listview_searchbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="60dp"/>
+            android:layout_marginTop="60dp" />
 
     </FrameLayout>
 
