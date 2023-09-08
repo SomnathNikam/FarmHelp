@@ -87,6 +87,7 @@ class PhoneAuth : AppCompatActivity() {
                         // Log.d(TAG, "signInWithCredential:success")
 
                         val user = task.result?.user
+                        send_home()
                     } else {
                         // Sign in failed, display a message and update the UI
                         // Log.w(TAG, "signInWithCredential:failure", task.exception)
@@ -120,6 +121,11 @@ class PhoneAuth : AppCompatActivity() {
             verificationId: String,
             token: ForceResendingToken,
         ) {
+            val otpIntent = Intent(this@PhoneAuth,OTP_activity::class.java)
+            otpIntent.putExtra("otpcr",verificationId)
+            startActivity(otpIntent)
+            finish()
+
             // The SMS verification code has been sent to the provided phone number, we
             // now need to ask the user to enter the code and then construct a credential
             // by combining the code with a verification ID.

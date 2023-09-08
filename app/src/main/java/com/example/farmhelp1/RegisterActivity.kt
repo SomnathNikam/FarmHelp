@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.example.farmhelp1.databinding.ActivityMainBinding
 import com.example.farmhelp1.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -21,12 +22,16 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         currentUser = auth.currentUser
 
+//       binding.button.setOnClickListener {
+//           login()
+//       }
+
     }
     fun logout(){
         auth.signOut()
         login()
     }
-    fun login(){
+    private fun login(){
         val login = Intent(this@RegisterActivity,PhoneAuth::class.java)
         startActivity(login)
         finish()
@@ -38,9 +43,7 @@ class RegisterActivity : AppCompatActivity() {
         }
         else
         {
-            var userInfo = currentUser!!.phoneNumber
-            userInfo.toString()
-
+           Toast.makeText(this,"Already Login",Toast.LENGTH_LONG).show()
 
 
         }
