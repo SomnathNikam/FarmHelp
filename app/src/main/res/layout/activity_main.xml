@@ -33,13 +33,14 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/inputbg"
                 android:inputType="text"
-                app:cardCornerRadius="10dp"
+                app:cardCornerRadius="16dp"
                 app:useDrawerArrowDrawable="true"
                 app:goIcon="@drawable/baseline_keyboard_voice_24"
                 app:voiceIcon="@drawable/baseline_keyboard_voice_24"
                 app:autoShowKeyboard="true"
                 app:iconifiedByDefault="false"
-                app:queryHint="Search here ...">
+                app:queryHint="Search here ..."
+                app:queryBackground="@android:color/transparent">
 
             </androidx.appcompat.widget.SearchView>
 
