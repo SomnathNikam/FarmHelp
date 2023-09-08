@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_700"
-
+   android:orientation="vertical"
+    android:id="@+id/info"
     tools:context=".info">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Information  Fragment"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_gravity="center"/>
 
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="150dp"
+        app:cardElevation="14dp">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputbg"
+        android:inputType="text"
+        app:cardCornerRadius="10dp"
+        app:useDrawerArrowDrawable="true"
+        app:goIcon="@drawable/baseline_keyboard_voice_24"
+        app:voiceIcon="@drawable/baseline_keyboard_voice_24"
+        app:autoShowKeyboard="true"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search here ...">
+
+    </androidx.appcompat.widget.SearchView>
+    </androidx.cardview.widget.CardView>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
 </FrameLayout>
