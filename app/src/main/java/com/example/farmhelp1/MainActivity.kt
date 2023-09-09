@@ -24,10 +24,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         replaceFragment(Home())
 
-        val ArrayList = arrayOf("Deepak", "Amit", "Somnath", "Abhijeet", "Manisha")
-        val arrayAdapter: ArrayAdapter<*>
-        arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,ArrayList)
-        binding.ListviewSearchbar.adapter = arrayAdapter
 
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId){
@@ -52,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
         val FragmentTransaction = fragmentManager.beginTransaction()
         FragmentTransaction.replace(R.id.frmelayout,fragment)
+        FragmentTransaction.commit()
     }
 
 
