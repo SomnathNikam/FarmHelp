@@ -10,18 +10,18 @@ import androidx.fragment.app.Fragment
 import com.example.farmhelp1.databinding.FragmentHomeBinding
 
 
-// TODO: Rename parameter arguments, choose names that match
+
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 //private const val ARG_PARAM1 = "param1"
 //private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Home.newInstance] factory method to
- * create an instance of this fragment.
- */
+///**
+// * A simple [Fragment] subclass.
+// * Use the [Home.newInstance] factory method to
+// * create an instance of this fragment.
+// */
 class Home : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var _binding: FragmentHomeBinding? =null
     private val binding get() = _binding!!
 
@@ -42,13 +42,17 @@ class Home : Fragment() {
         val arrayAdapter: ArrayAdapter<*>
         arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1,ArrayList)
         binding.ListviewSearchbar.adapter = arrayAdapter
+
+
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 binding.searchBar.clearFocus()
+
                 if (ArrayList.contains(p0)) {
                     arrayAdapter.filter.filter(p0)
                 }
+
                 return false
             }
 
@@ -77,7 +81,7 @@ class Home : Fragment() {
 //         * @param param2 Parameter 2.
 //         * @return A new instance of fragment Home.
 //         */
-//        // TODO: Rename and change types and number of parameters
+//        //
 //        @JvmStatic
 //        fun newInstance(param1: String, param2: String) =
 //            Home().apply {
