@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.SearchView
+
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.databinding.FragmentHomeBinding
 
@@ -22,26 +23,32 @@ import com.example.farmhelp1.databinding.FragmentHomeBinding
 // */
 class Home : Fragment() {
 
-    private var _binding: FragmentHomeBinding? =null
-    private val binding get() = _binding!!
+    private lateinit var _binding: FragmentHomeBinding
+    private val binding get() = _binding
+    //private var param1: String? = null
+    //private var param2: String? = null
+    //private var param1: String? = null
+  //  private var param2: String? = null
 
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
 
-        _binding = FragmentHomeBinding.inflate(inflater,container,true)
-//        val list = arrayOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
-//            "Jim","Russel","Donald","Brack","Vladimir")
+        _binding = FragmentHomeBinding.inflate(inflater, container, true)
 
 
-        val ArrayList = arrayOf("Deepak", "Amit", "Somnath", "Abhijeet", "Manisha")
-        val arrayAdapter: ArrayAdapter<*>
-        arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1,ArrayList)
-        binding.ListviewSearchbar.adapter = arrayAdapter
+        val arrayList = arrayOf("Deepak", "Amit", "Somnath", "Abhijeet")
+        val arrayAdapter = ArrayAdapter(requireContext(),
+            android.R.layout.simple_list_item_1,
+            arrayList)
+
+
+//        val arrayAdapter: ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ArrayList)
+       binding.ListviewSearchbar.adapter = arrayAdapter
 
 
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
@@ -49,7 +56,7 @@ class Home : Fragment() {
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 binding.searchBar.clearFocus()
 
-                if (ArrayList.contains(p0)) {
+                if (arrayList.contains(p0)) {
                     arrayAdapter.filter.filter(p0)
                 }
 
@@ -68,9 +75,18 @@ class Home : Fragment() {
 
     }
 
-    private fun ArrayAdapter(home: Home, simpleListItem1: Int, arrayList: Array<String>): ArrayAdapter<*> {
-                    TODO()
-    }
+//    private fun ArrayAdapter(home: Home, simpleListItem1: Int, arrayList: Array<String>): ArrayAdapter<String> {
+//
+//    }
+
+//    private fun ArrayAdapter(home: Home, simpleListItem1: Int, arrayList: Array<String>): Int {
+//        return
+//    }
+
+//    private fun ArrayAdapter(home: Home, simpleListItem1: Int, arrayList: Array<String>): ArrayAdapter<*> {
+//
+//    }
+
 
 //    companion object {
 //        /**
@@ -89,5 +105,24 @@ class Home : Fragment() {
 //                    putString(ARG_PARAM1, param1)
 //                    putString(ARG_PARAM2, param2)
 //                }
+
+//    companion object {
+//        /**
+//         * Use this factory method to create a new instance of
+//         * this fragment using the provided parameters.
+//         *
+//         * @param param1 Parameter 1.
+//         * @param param2 Parameter 2.
+//         * @return A new instance of fragment About.
+//         */
+//        @JvmStatic
+//        fun newInstance(param1: String, param2: String) =
+//            About().apply {
+//                arguments = Bundle().apply {
+//                    putString(ARG_PARAM1, param1)
+//                    putString(ARG_PARAM2, param2)
+//                }
 //            }
-    }
+//    }
+
+}

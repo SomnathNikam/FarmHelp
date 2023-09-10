@@ -1,16 +1,14 @@
 package com.example.farmhelp1
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.SearchView
-import com.example.farmhelp1.databinding.ActivityOtpBinding
+import androidx.fragment.app.Fragment
 import com.example.farmhelp1.databinding.FragmentInfoBinding
 
-// TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
 /**
@@ -19,7 +17,7 @@ import com.example.farmhelp1.databinding.FragmentInfoBinding
  * create an instance of this fragment.
  */
 class info : Fragment() {
-    // TODO: Rename and change types of parameters
+    //
 
     private var _binding:FragmentInfoBinding? =null
     private val binding get() = _binding!!
@@ -37,7 +35,7 @@ class info : Fragment() {
 
         val listAdapter:ArrayAdapter<*>
 
-        listAdapter=ArrayAdapter(this,
+        listAdapter=ArrayAdapter(requireContext(),
             android.R.layout.simple_list_item_1,
             list)
         binding.listview1.adapter=listAdapter
@@ -66,9 +64,9 @@ class info : Fragment() {
     return binding.root
     }
 
-    private fun ArrayAdapter(info: info, simpleListItem1: Int, list: Array<String>): ArrayAdapter<*> {
-            TODO()
-    }
+//    private fun ArrayAdapter(info: info, simpleListItem1: Int, list: Array<String>): ArrayAdapter<*> {
+//
+//    }
 
 
 }
