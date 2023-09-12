@@ -8,12 +8,6 @@
     android:id="@+id/info"
     tools:context=".info">
 
-
-
-
-
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/Cardview"
         android:layout_width="match_parent"
