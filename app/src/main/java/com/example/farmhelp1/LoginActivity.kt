@@ -1,19 +1,19 @@
 package com.example.farmhelp1
 
-import android.app.Activity
 //import android.app.LauncherActivity
-import android.content.ContentValues.TAG
-import android.content.Intent
+//import android.content.ContentValues.TAG
 //import android.content.pm.LauncherActivityInfo
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 //import android.util.Log
 //import android.widget.Button
-import android.widget.Toast
 //import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
-import com.example.farmhelp1.databinding.ActivityLoginBinding
 //import com.example.farmhelp1.databinding.ActivityMainBinding
+import android.app.Activity
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import com.example.farmhelp1.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -163,7 +163,7 @@ class LoginActivity : AppCompatActivity() {
             val credential = GoogleAuthProvider.getCredential(account.idToken, null)
             auth.signInWithCredential(credential).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    val intent: Intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     intent.putExtra("email", account.email)
                     intent.putExtra("name", account.displayName)
                     startActivity(intent)
