@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+        replaceFragment(Home())
 
 
 
@@ -34,17 +34,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             true
+
         }
 
-
     }
-
-
-
     private fun replaceFragment(fragment: Fragment){
 
-        val fragmentManager = supportFragmentManager
-        val FragmentTransaction = fragmentManager.beginTransaction()
+        var fragmentManager = supportFragmentManager
+        var FragmentTransaction = fragmentManager.beginTransaction()
         FragmentTransaction.replace(R.id.frmelayout,fragment)
         FragmentTransaction.commit()
     }
