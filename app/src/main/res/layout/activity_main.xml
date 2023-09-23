@@ -40,6 +40,7 @@
                 app:voiceIcon="@drawable/baseline_keyboard_voice_24"
                 app:autoShowKeyboard="true"
                 app:iconifiedByDefault="false"
+
                 app:queryHint="Search here ..."
                 app:queryBackground="@android:color/transparent">
 
@@ -76,6 +77,7 @@
         app:itemHorizontalTranslationEnabled="true"
         app:itemIconSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
+
         app:menu="@menu/bottom_menu">
     <!-- app:itemIconTint="@color/purple_500"-->
 
