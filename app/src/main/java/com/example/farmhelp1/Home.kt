@@ -1,13 +1,15 @@
 package com.example.farmhelp1
 
+//import android.widget.SearchView
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.databinding.FragmentHomeBinding
 
-// TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -18,18 +20,16 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class Home : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
     private var _binding: FragmentHomeBinding? = null
-
-    //    private lateinit var binding: FragmentHomeBinding
-    private var binding: FragmentHomeBinding = _binding!!
+//    private var binding: FragmentHomeBinding = _binding!!
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+//        binding = FragmentHomeBinding.inflate(layoutInflater)
 
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
@@ -45,38 +45,40 @@ class Home : Fragment() {
 
 
 //    _binding = FragmentHomeBinding.inflate(inflater,container,false)
-////        val listView1:ListView =
-//        val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
-//            "Jim","Russel","Donald","Brack","Vladimir")
-//
-//        var listAdapter: ArrayAdapter<*>
-//
-//        listAdapter= ArrayAdapter(
-//           requireContext(),
-//            R.layout.simple_list_item_1,
-//            list)
-////        binding.Listview_searchbar.adapter=listAdapter
-//        _binding.Listview_searchbar.adapter = listAdapter
-//
-//        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-//            androidx.appcompat.widget.SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(list: String?): Boolean {
-//               binding.searchBar.requestFocus()
-////                if (list.contains(p0)) {
-////                    listAdapter.filter.filter(p0)
-////                }
-//                listAdapter.filter.filter(list.toString())
-//                return false
-//            }
-//
-//
-//            override fun onQueryTextChange(list:String?): Boolean {
-//
-//                listAdapter.filter.filter(list.toString())
-//                return false
-//            }
-//        })
-//
+//        val listView1:ListView =
+        val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
+            "Jim","Russel","Donald","Brack","Vladimir")
+
+
+
+        var listAdapter: ArrayAdapter<*>
+
+        listAdapter= ArrayAdapter(
+           requireContext(),
+            android.R.layout.simple_list_item_1,
+            list)
+//        binding.Listview_searchbar.adapter=listAdapter
+
+          _binding?.ListviewSearchbar?.adapter= listAdapter
+
+        _binding?.searchBar?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                _binding!!.searchBar.requestFocus()
+    //                if (list.contains(p0)) {
+    //                    listAdapter.filter.filter(p0)
+    //                }
+                listAdapter.filter.filter(p0)
+                return false
+            }
+
+
+            override fun onQueryTextChange(p0:String?): Boolean {
+
+                listAdapter.filter.filter(p0)
+                return false
+            }
+        })
+
 //
 //
 //
@@ -113,7 +115,7 @@ class Home : Fragment() {
 
 
 
-        return binding.root
+        return _binding?.root
     }
 
 }
