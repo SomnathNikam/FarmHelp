@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ListView
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
+import com.example.farmhelp1.R
 import com.example.farmhelp1.databinding.FragmentHomeBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,21 +23,21 @@ import com.example.farmhelp1.databinding.FragmentHomeBinding
  */
 class Home : Fragment() {
 
-    private var param1: String? = null
-    private var param2: String? = null
-    private var _binding: FragmentHomeBinding? = null
+//    private var param1: String? = null
+//    private var param2: String? = null
+//    private var _binding: FragmentHomeBinding? = null
 //    private var binding: FragmentHomeBinding = _binding!!
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-//        binding = FragmentHomeBinding.inflate(layoutInflater)
-
-//        arguments?.let {
-//            param1 = it.getString(ARG_PARAM1)
-//            param2 = it.getString(ARG_PARAM2)
-//        }
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+////        binding = FragmentHomeBinding.inflate(layoutInflater)
+//
+////        arguments?.let {
+////            param1 = it.getString(ARG_PARAM1)
+////            param2 = it.getString(ARG_PARAM2)
+////        }
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,9 +45,13 @@ class Home : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-
+        val views = FragmentHomeBinding.inflate(layoutInflater,container,false)
 //    _binding = FragmentHomeBinding.inflate(inflater,container,false)
-//        val listView1:ListView =
+
+
+        val listView1 = view?.findViewById<ListView>(R.id.Listview_searchbar)
+        var searchBar = view?.findViewById<SearchView>(R.id.search_bar)
+
         val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
             "Jim","Russel","Donald","Brack","Vladimir")
 
@@ -57,16 +63,16 @@ class Home : Fragment() {
            requireContext(),
             android.R.layout.simple_list_item_1,
             list)
-//        binding.Listview_searchbar.adapter=listAdapter
+            listView1?.adapter=listAdapter
 
-          _binding?.ListviewSearchbar?.adapter= listAdapter
+//          _binding?.ListviewSearchbar?.adapter= listAdapter
 
-        _binding?.searchBar?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+       searchBar?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(p0: String?): Boolean {
-                _binding!!.searchBar.requestFocus()
-    //                if (list.contains(p0)) {
-    //                    listAdapter.filter.filter(p0)
-    //                }
+                searchBar.requestFocus()
+                    if (list.contains(p0)) {
+                        listAdapter.filter.filter(p0)
+                    }
                 listAdapter.filter.filter(p0)
                 return false
             }
@@ -115,7 +121,7 @@ class Home : Fragment() {
 
 
 
-        return _binding?.root
+        return view
     }
 
 }

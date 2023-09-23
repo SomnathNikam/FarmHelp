@@ -62,9 +62,18 @@
         android:background="@drawable/inputbg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:labelVisibilityMode="labeled"
+        android:scrollbarThumbHorizontal="@color/black"
+        app:elevation="40dp"
 
+        android:keepScreenOn="true"
+        app:itemActiveIndicatorStyle="@color/white"
+        app:itemTextColor="@color/white"
+        app:itemIconSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_menu" >
+        app:menu="@menu/bottom_menu">
+    <!-- app:itemIconTint="@color/purple_500"-->
+
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>
