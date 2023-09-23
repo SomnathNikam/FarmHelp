@@ -5,6 +5,10 @@ import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.farmhelp1.Fragments.About
+import com.example.farmhelp1.Fragments.Home
+import com.example.farmhelp1.Fragments.info
+import com.example.farmhelp1.Fragments.schemes
 import com.example.farmhelp1.databinding.ActivityMainBinding
 
 

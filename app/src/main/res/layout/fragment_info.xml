@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
    android:orientation="vertical"
     android:id="@+id/info"
-    tools:context=".info">
+    tools:context=".Fragments.info">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/Cardview"

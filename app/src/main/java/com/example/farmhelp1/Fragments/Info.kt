@@ -1,4 +1,4 @@
-package com.example.farmhelp1
+package com.example.farmhelp1.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

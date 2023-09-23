@@ -1,4 +1,4 @@
-package com.example.farmhelp1
+package com.example.farmhelp1.Fragments
 
 //import android.widget.SearchView
 import android.os.Bundle
@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment
 import com.example.farmhelp1.databinding.FragmentHomeBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+//private const val ARG_PARAM1 = "param1"
+//private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -31,10 +31,10 @@ class Home : Fragment() {
         super.onCreate(savedInstanceState)
 //        binding = FragmentHomeBinding.inflate(layoutInflater)
 
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+//        arguments?.let {
+//            param1 = it.getString(ARG_PARAM1)
+//            param2 = it.getString(ARG_PARAM2)
+//        }
     }
 
     override fun onCreateView(
