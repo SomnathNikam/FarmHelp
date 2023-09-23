@@ -35,7 +35,7 @@
             app:useDrawerArrowDrawable="true"
             app:goIcon="@drawable/baseline_keyboard_voice_24"
             app:voiceIcon="@drawable/baseline_keyboard_voice_24"
-            app:autoShowKeyboard="true"
+
             app:iconifiedByDefault="false"
             app:queryHint="Search here ..."
 

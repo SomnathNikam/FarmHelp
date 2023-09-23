@@ -30,7 +30,7 @@ class info : Fragment() {
     ): View? {
 
         _binding = FragmentInfoBinding.inflate(inflater,container,false)
-      val list = arrayOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
+      val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
           "Jim","Russel","Donald","Brack","Vladimir")
 
         val listAdapter:ArrayAdapter<*>
@@ -38,7 +38,7 @@ class info : Fragment() {
         listAdapter=ArrayAdapter(requireContext(),
             android.R.layout.simple_list_item_1,
             list)
-        binding.listview1.adapter=listAdapter
+        binding.listview1.adapter=listAdapter;
 
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
