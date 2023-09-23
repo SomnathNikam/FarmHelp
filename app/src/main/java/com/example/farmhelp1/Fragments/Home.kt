@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.FrameLayout
 import android.widget.ListView
 import androidx.appcompat.widget.SearchView
+import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.R
 import com.example.farmhelp1.databinding.FragmentHomeBinding
@@ -51,6 +54,9 @@ class Home : Fragment() {
 
         val listView1 = view?.findViewById<ListView>(R.id.Listview_searchbar)
         var searchBar = view?.findViewById<SearchView>(R.id.search_bar)
+        var homeBinding =view?.findViewById<ConstraintLayout>(R.id.fragment_home)
+        var frame = view?.findViewById<FrameLayout>(R.id.home)
+        var card = view?.findViewById<CardView>(R.id.Cardview)
 
         val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
             "Jim","Russel","Donald","Brack","Vladimir")
@@ -68,19 +74,19 @@ class Home : Fragment() {
 //          _binding?.ListviewSearchbar?.adapter= listAdapter
 
        searchBar?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(p0: String?): Boolean {
+            override fun onQueryTextSubmit(list: String?): Boolean {
                 searchBar.requestFocus()
-                    if (list.contains(p0)) {
-                        listAdapter.filter.filter(p0)
-                    }
-                listAdapter.filter.filter(p0)
+
+                        listAdapter.filter.filter(list)
+
+
                 return false
             }
 
 
-            override fun onQueryTextChange(p0:String?): Boolean {
+            override fun onQueryTextChange(list:String?): Boolean {
 
-                listAdapter.filter.filter(p0)
+                listAdapter.filter.filter(list)
                 return false
             }
         })

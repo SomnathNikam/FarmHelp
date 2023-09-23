@@ -35,6 +35,7 @@
                 android:inputType="text"
                 app:cardCornerRadius="16dp"
                 app:useDrawerArrowDrawable="true"
+
                 app:goIcon="@drawable/baseline_keyboard_voice_24"
                 app:voiceIcon="@drawable/baseline_keyboard_voice_24"
                 app:autoShowKeyboard="true"
@@ -64,11 +65,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:labelVisibilityMode="labeled"
         android:scrollbarThumbHorizontal="@color/black"
-        app:elevation="40dp"
+        app:elevation="4dp"
 
         android:keepScreenOn="true"
         app:itemActiveIndicatorStyle="@color/white"
-        app:itemTextColor="@color/white"
+        app:itemTextColor="@color/purple_500"
+       app:itemRippleColor="@color/purple_500"
+        app:itemTextAppearanceActive="@color/purple_500"
+        app:itemTextAppearanceInactive="@color/black"
+        app:itemHorizontalTranslationEnabled="true"
         app:itemIconSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_menu">

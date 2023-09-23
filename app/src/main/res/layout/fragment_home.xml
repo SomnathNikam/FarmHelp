@@ -39,6 +39,10 @@
 
             app:iconifiedByDefault="false"
             app:queryHint="Search here ..."
+            app:animateMenuItems="true"
+            app:autoShowKeyboard="false"
+            android:fitsSystemWindows="true"
+            android:nextFocusDown="@color/green"
 
             app:queryBackground="@android:color/transparent">
 
