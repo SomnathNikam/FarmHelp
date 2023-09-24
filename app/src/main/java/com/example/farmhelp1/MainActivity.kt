@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.farmhelp1.Fragments.About
 import com.example.farmhelp1.Fragments.Home
 import com.example.farmhelp1.Fragments.info
+import com.example.farmhelp1.Fragments.plus
 import com.example.farmhelp1.Fragments.schemes
 import com.example.farmhelp1.databinding.ActivityMainBinding
 
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.home -> replaceFragment(Home())
                 R.id.info -> replaceFragment(info())
+                R.id.plus -> replaceFragment(plus())
                 R.id.schemes -> replaceFragment(schemes())
                 R.id.about_us -> replaceFragment(About())
                 else -> {

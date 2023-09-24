@@ -13,11 +13,11 @@ import com.example.farmhelp1.databinding.FragmentInfoBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
-/**
- * A simple [Fragment] subclass.
- * Use the [info.newInstance] factory method to
- * create an instance of this fragment.
- */
+///**
+// * A simple [Fragment] subclass.
+// * Use the [info.newInstance] factory method to
+// * create an instance of this fragment.
+// */
 class info : Fragment() {
     //
 
@@ -53,20 +53,20 @@ class info : Fragment() {
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener
         {
             override fun onQueryTextSubmit(p0: String?): Boolean {
-//                binding.searchBar.clearFocus()
-                if (list.contains(p0)) {
-                    listAdapter.filter.filter("")
-                    listAdapter.filter.filter(p0).toString()
-
-                }
+                binding.searchBar.clearFocus()
+//                if (list.contains(p0)) {
+//                    listAdapter.filter.filter("")
+//                    listAdapter.filter.filter(p0).toString()
+//
+//                }
                 return false
             }
 
 
-            override fun onQueryTextChange(newText: String?): Boolean {
+            override fun onQueryTextChange(p0: String?): Boolean {
 
-                listAdapter.filter.filter(newText).toString()
-                return false
+                listAdapter.filter.filter(p0)
+                return true
             }
         })
 

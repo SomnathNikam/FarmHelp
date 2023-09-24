@@ -128,7 +128,7 @@ class Home : Fragment() {
 
 
 
-        return view
+        return homeBinding?.rootView
     }
 
 }
