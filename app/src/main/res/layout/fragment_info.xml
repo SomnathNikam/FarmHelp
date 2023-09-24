@@ -18,7 +18,7 @@
         app:cardElevation="14dp">
 
 
-    <androidx.appcompat.widget.SearchView
+    <SearchView
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         app:queryBackground="@android:color/transparent"
         app:queryHint="Search here ...">
 
-    </androidx.appcompat.widget.SearchView>
+    </SearchView>
     </androidx.cardview.widget.CardView>
     <ListView
         android:id="@+id/listview1"

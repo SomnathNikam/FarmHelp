@@ -1,11 +1,13 @@
 package com.example.farmhelp1.Fragments
 
+//import androidx.appcompat.widget.SearchView
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.SearchView
+
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.databinding.FragmentInfoBinding
 
@@ -35,13 +37,14 @@ class info : Fragment() {
 
         val listAdapter:ArrayAdapter<*>
 
-        listAdapter=ArrayAdapter(requireContext(),
+        listAdapter=ArrayAdapter(
+            requireContext(),
             android.R.layout.simple_list_item_1,
             list)
-        binding.listview1.adapter=listAdapter;
+        binding.listview1.adapter=listAdapter
 
-        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener
+        {
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 binding.searchBar.clearFocus()
                 if (list.contains(p0)) {
@@ -51,9 +54,9 @@ class info : Fragment() {
             }
 
 
-            override fun onQueryTextChange(p0: String?): Boolean {
+            override fun onQueryTextChange(newText: String?): Boolean {
 
-                listAdapter.filter.filter(p0)
+                listAdapter.filter.filter(newText)
                 return false
             }
         })

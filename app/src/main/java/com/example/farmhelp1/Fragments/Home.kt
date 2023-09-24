@@ -13,7 +13,6 @@ import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.R
-import com.example.farmhelp1.databinding.FragmentHomeBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 //private const val ARG_PARAM1 = "param1"
@@ -48,7 +47,7 @@ class Home : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val views = FragmentHomeBinding.inflate(layoutInflater,container,false)
+        val views = inflater!!.inflate(R.layout.fragment_home,container,false)
 //    _binding = FragmentHomeBinding.inflate(inflater,container,false)
 
 
@@ -57,6 +56,7 @@ class Home : Fragment() {
         var homeBinding =view?.findViewById<ConstraintLayout>(R.id.fragment_home)
         var frame = view?.findViewById<FrameLayout>(R.id.home)
         var card = view?.findViewById<CardView>(R.id.Cardview)
+
 
         val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
             "Jim","Russel","Donald","Brack","Vladimir")
@@ -69,25 +69,26 @@ class Home : Fragment() {
            requireContext(),
             android.R.layout.simple_list_item_1,
             list)
+
             listView1?.adapter=listAdapter
 
 //          _binding?.ListviewSearchbar?.adapter= listAdapter
 
        searchBar?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(list: String?): Boolean {
+            override fun onQueryTextSubmit(p0: String?): Boolean {
                 searchBar.requestFocus()
 
-                        listAdapter.filter.filter(list)
+                        listAdapter.filter.filter(p0)
 
 
-                return false
+                return true
             }
 
 
-            override fun onQueryTextChange(list:String?): Boolean {
+            override fun onQueryTextChange(p0:String?): Boolean {
 
-                listAdapter.filter.filter(list)
-                return false
+                listAdapter.filter.filter(p0)
+                return true
             }
         })
 
