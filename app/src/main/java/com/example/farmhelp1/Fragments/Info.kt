@@ -42,13 +42,22 @@ class info : Fragment() {
             android.R.layout.simple_list_item_1,
             list)
         binding.listview1.adapter=listAdapter
+        binding.searchBar.setOnClickListener{
+            binding.searchBar.setQuery("Abhay",true)
+            binding.searchBar.setOnSearchClickListener {
+                list.contains("Abhay")
+            }
+            binding.searchBar.focusSearch(binding.searchBar,4000)
+        }
 
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener
         {
             override fun onQueryTextSubmit(p0: String?): Boolean {
-                binding.searchBar.clearFocus()
+//                binding.searchBar.clearFocus()
                 if (list.contains(p0)) {
-                    listAdapter.filter.filter(p0)
+                    listAdapter.filter.filter("")
+                    listAdapter.filter.filter(p0).toString()
+
                 }
                 return false
             }
@@ -56,7 +65,7 @@ class info : Fragment() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
 
-                listAdapter.filter.filter(newText)
+                listAdapter.filter.filter(newText).toString()
                 return false
             }
         })
