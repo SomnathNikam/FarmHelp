@@ -10,6 +10,13 @@
                 android:centerColor="#E0F608"
                 android:endColor="@color/design_default_color_background"
                 />
+<!--                        <gradient android:startColor="@color/indigo"-->
+<!--                            android:angle="45"-->
+<!--                            android:centerColor="@color/green"-->
+<!--                            android:endColor="@color/cyan"-->
+<!--                            />-->
+
+
         </shape>
 </item>
 

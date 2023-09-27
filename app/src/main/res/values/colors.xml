@@ -10,5 +10,16 @@
     <color name="green">#4fa853</color>
     <color name="logincolor">#3734D4</color>
 
+    <color name="primary_dark">#009348</color>
+    <color name="colorAccent">#263238</color>
+    <color name="background">#e4e4e4</color>
 
+    <color name="black_two">#383838</color>
+    <color name="gray">#5b5b5b</color>
+    <color name="light_gray">#e4e4e4</color>
+    <color name="transparent">#00000000</color>
+    <color name="orange">#EF6C00</color>
+    <color name="blue">#039BE5</color>
+    <color name="cyan">#0097A7</color>
+    <color name="indigo">#3F51B5</color>
 </resources>
