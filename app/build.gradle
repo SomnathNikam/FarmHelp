@@ -59,6 +59,9 @@ dependencies {
     // Also add the dependency for the Google Play services library and specify its version
     implementation ("com.google.android.gms:play-services-auth:20.7.0")
 
+    //CircularImageView Library/Dependency
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
 
 
 

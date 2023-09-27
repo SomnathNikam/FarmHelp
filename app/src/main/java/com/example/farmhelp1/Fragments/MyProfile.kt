@@ -17,7 +17,7 @@ import com.example.farmhelp1.R
 // * Use the [About.newInstance] factory method to
 // * create an instance of this fragment.
 // */
-class About : Fragment() {
+class MyProfile : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null

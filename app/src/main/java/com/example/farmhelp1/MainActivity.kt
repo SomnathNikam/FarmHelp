@@ -5,8 +5,8 @@ import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.example.farmhelp1.Fragments.About
 import com.example.farmhelp1.Fragments.Home
+import com.example.farmhelp1.Fragments.MyProfile
 import com.example.farmhelp1.Fragments.info
 import com.example.farmhelp1.Fragments.plus
 import com.example.farmhelp1.Fragments.schemes
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.info -> replaceFragment(info())
                 R.id.plus -> replaceFragment(plus())
                 R.id.schemes -> replaceFragment(schemes())
-                R.id.about_us -> replaceFragment(About())
+                R.id.about_us -> replaceFragment(MyProfile())
                 else -> {
 
                 }
