@@ -1,113 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<androidx.drawerlayout.widget.DrawerLayout xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:id="@+id/drawer"-->
-<!--    tools:context=".MainActivity">-->
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-<!--        <com.google.android.material.navigation.NavigationView-->
-<!--            android:id="@+id/Nav_view"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:fitsSystemWindows="true"-->
-<!--            app:menu="@menu/bottom_menu"-->
-
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/frmelayout"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            tools:ignore="MissingConstraints" />-->
-
-        <FrameLayout
-            android:id="@+id/frmelayout"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/Cardview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="14dp">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/drawerlayout"
+    tools:context=".MainActivity">
 
 
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/search_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/inputbg"
-                    android:inputType="text"
-                    app:autoShowKeyboard="true"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--            <com.google.android.material.navigation.NavigationView-->
+<!--                android:id="@+id/Nav_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:fitsSystemWindows="true"-->
+<!--                app:menu="@menu/bottom_menu"-->
+
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/frmelayout"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                tools:ignore="MissingConstraints" />-->
+
+    <FrameLayout
+        android:id="@+id/frmelayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:orientation="vertical">
 
 
-                    app:goIcon="@drawable/baseline_keyboard_voice_24"
-                    app:iconifiedByDefault="false"
-                    app:queryBackground="@android:color/transparent"
-                    app:queryHint="Search here ..."
-
-                    app:useDrawerArrowDrawable="true"
-                    app:voiceIcon="@drawable/baseline_keyboard_voice_24">
-
-                </androidx.appcompat.widget.SearchView>
-
-            </androidx.cardview.widget.CardView>
-
-            <ListView
-                android:id="@+id/Listview_searchbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="60dp" />
-
-        </FrameLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/actionBarToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/white"
+            app:title="Navigation Drawer"
+            android:background="@color/green"/>
 
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
-            android:layout_width="0dp"
-            android:layout_height="65dp"
-            android:background="@drawable/inputbg"
-            android:keepScreenOn="true"
-            android:scrollbarThumbHorizontal="@color/black"
-            app:barrierAllowsGoneWidgets="true"
-            app:elevation="4dp"
-            app:itemActiveIndicatorStyle="@color/white"
-            app:itemHorizontalTranslationEnabled="true"
-            app:itemIconSize="30dp"
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/Nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header"
 
-            app:itemTextColor="@drawable/selector_bottom_nav"
-            app:labelVisibilityMode="labeled"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:itemIconTint="@drawable/selector_bottom_nav"
-
-            app:menu="@menu/bottom_menu">
-            <!-- app:itemIconTint="@color/purple_500"-->
+            app:menu="@menu/nav_menus"
+           />
 
 
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--    </androidx.drawerlayout.widget.DrawerLayout>-->
+
+
+    </FrameLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="@drawable/inputbg"
+        android:keepScreenOn="true"
+        android:scrollbarThumbHorizontal="@color/black"
+        app:barrierAllowsGoneWidgets="true"
+        app:elevation="4dp"
+        app:itemActiveIndicatorStyle="@color/white"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="30dp"
+
+        app:itemTextColor="@drawable/selector_bottom_nav"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:itemIconTint="@drawable/selector_bottom_nav"
+
+        app:menu="@menu/bottom_menu">
+        <!-- app:itemIconTint="@color/purple_500"-->
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
