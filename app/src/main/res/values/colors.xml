@@ -21,5 +21,11 @@
     <color name="orange">#EF6C00</color>
     <color name="blue">#039BE5</color>
     <color name="cyan">#0097A7</color>
+
     <color name="indigo">#3F51B5</color>
+
+
+
+    // samples
+    <color name="sample1">#28EA00</color>
 </resources>
