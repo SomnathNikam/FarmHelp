@@ -24,9 +24,14 @@
             android:id="@+id/actionBarToggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/inputbg"
+            app:titleTextColor="@color/white"
             app:title="Farmhelp"
-            app:titleTextColor="@color/white" />
+            android:background="@color/green"
+            app:menu="@menu/custom_menu"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/Cardview"
             android:layout_width="match_parent"
@@ -57,15 +62,15 @@
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-
+            android:id="@+id/floatingbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:layout_gravity="end"
             android:layout_marginTop="650dp"
             android:layout_marginRight="30dp"
-
-            app:srcCompat="@drawable/baseline_message_24" />
+            android:backgroundTint="@color/green"
+            app:srcCompat="@drawable/baseline_add_24" />
 
         <!--        <ListView-->
 <!--            android:id="@+id/Listview_searchbar"-->
