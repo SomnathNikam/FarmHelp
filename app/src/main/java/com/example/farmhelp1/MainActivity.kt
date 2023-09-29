@@ -9,6 +9,7 @@ import com.example.farmhelp1.Fragments.info
 import com.example.farmhelp1.Fragments.schemes
 import com.example.farmhelp1.R.id.frmelayout
 import com.example.farmhelp1.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,12 +22,13 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
 
+        var  bottombar = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
 
 
         replaceFragment(Home())
 
-        binding.bottomNav.setOnItemSelectedListener {
+        bottombar.setOnItemSelectedListener {
 
             when(it.itemId){
                 R.id.home -> replaceFragment(Home())
