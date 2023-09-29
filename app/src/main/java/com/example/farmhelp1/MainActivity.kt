@@ -1,10 +1,8 @@
 package com.example.farmhelp1
 
 import android.os.Bundle
-import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 import com.example.farmhelp1.Fragments.Home
 import com.example.farmhelp1.Fragments.MyProfile
 import com.example.farmhelp1.Fragments.info
@@ -21,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
 
 
