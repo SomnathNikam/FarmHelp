@@ -7,6 +7,23 @@
     tools:context=".MainActivity">
 
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/actionBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="690dp"
+
+        android:background="@drawable/rect"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/custom_menu"
+        app:title="Farmhelp"
+         />
+
     <FrameLayout
         android:id="@+id/frmelayout"
         android:layout_width="0dp"
@@ -20,35 +37,29 @@
         app:layout_constraintVertical_bias="1.0">
 
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/actionBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:titleTextColor="@color/white"
-            app:title="Farmhelp"
-            android:background="@drawable/rect"
-            android:layout_marginTop="10dp"
-            app:menu="@menu/custom_menu"
-            >
-
-        </androidx.appcompat.widget.Toolbar>
-
+        <!--        <Toolbar-->
+        <!--            android:id="@+id/actionBar"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:titleTextColor="@color/white"-->
+        <!--            android:clickable="true"-->
+        <!--            app:title="Farmhelp"-->
+        <!--            android:background="@drawable/rect"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            app:menu="@menu/custom_menu"-->
+        <!--            />-->
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
             android:layout_gravity="end"
             android:layout_marginTop="650dp"
             android:layout_marginRight="30dp"
             android:backgroundTint="@color/cyan"
+            android:clickable="true"
             app:srcCompat="@drawable/baseline_add_24" />
-
-
-
-
 
 
     </FrameLayout>
@@ -60,13 +71,10 @@
         android:layout_height="65dp"
         android:background="@drawable/rect"
         android:keepScreenOn="true"
-        android:scrollbarThumbHorizontal="@color/black"
-        app:barrierAllowsGoneWidgets="true"
-        app:elevation="4dp"
-        app:itemActiveIndicatorStyle="@color/white"
-        app:itemHorizontalTranslationEnabled="true"
-        app:itemIconSize="30dp"
 
+        app:elevation="4dp"
+        app:itemIconSize="30dp"
+        app:itemPaddingTop="10dp"
         app:itemIconTint="@drawable/selector_bottom_nav"
         app:itemTextColor="@drawable/selector_bottom_nav"
         app:labelVisibilityMode="labeled"
@@ -74,6 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintTop_toBottomOf="@+id/actionBar"
         app:menu="@menu/bottom_menu">
         <!-- app:itemIconTint="@color/purple_500"-->
 

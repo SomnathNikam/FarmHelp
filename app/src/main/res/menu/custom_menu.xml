@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/search"
+        android:id="@+id/searching"
         android:title="Search"
+
         android:icon="@drawable/baseline_search_24"
 
         app:showAsAction="always"/>
@@ -14,6 +15,12 @@
         android:icon="@drawable/baseline_search_24"
 
        app:showAsAction="never"/>
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        android:icon="@drawable/baseline_search_24"
+
+        app:showAsAction="never"/>
     <item
         android:id="@+id/share"
         android:title="Share"
@@ -25,6 +32,11 @@
             <item
                 android:id="@+id/whatsapp"
                 android:title="whatsapp"
+                app:showAsAction="never"
+                ></item>
+            <item
+                android:id="@+id/instagram"
+                android:title="Instagram"
                 app:showAsAction="never"
                 ></item>
         </menu>

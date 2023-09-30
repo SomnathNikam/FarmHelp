@@ -3,18 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green"
+
     tools:context=".Fragments.MyProfile">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/Aboutll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-    <TextView
-        android:id="@+id/about_us"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About  Fragment"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_gravity="center"/>
+        android:orientation="vertical"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/jjfb"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:text="Name:" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:text="Somnath Nikam" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 
 </FrameLayout>

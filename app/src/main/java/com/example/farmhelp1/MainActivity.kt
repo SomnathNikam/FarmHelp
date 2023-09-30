@@ -1,11 +1,12 @@
 package com.example.farmhelp1
 
-import android.annotation.SuppressLint
+//import androidx.R
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.Fragments.Home
 import com.example.farmhelp1.Fragments.MyProfile
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
@@ -33,7 +34,17 @@ class MainActivity : AppCompatActivity() {
 
         val floatingbtn = findViewById<FloatingActionButton>(R.id.floatingbtn)
 
-        val search = findViewById<Toolbar>(R.id.actionBar)
+
+//        val search = findViewById<Toolbar>(R.id.actionBar)
+//         search.setOnMenuItemClickListener {
+//             onCreateOptionsMenu(R.id.searching)
+//             onOptionsItemSelected(menu.searching)
+//         }
+//        var searchActivity = findViewById<SearchView>(R.id.search_bar)
+//        searchActivity.setOnClickListener {
+//            val imb = Intent(this,SearchActivity::class.java)
+//        }
+
 
         replaceFragment(Home())
 
@@ -53,9 +64,9 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        floatingbtn.setOnClickListener{
-
-        }
+//        floatingbtn.setOnClickListener{
+//
+//        }
 
     }
     private fun replaceFragment(fragment: Fragment){
@@ -71,11 +82,46 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean{
 
+         when(item.itemId){
+           R.id.searching -> {
+               val i = Intent(this,SearchActivity::class.java)
+               startActivity(i)
+//               Toast.makeText(this,"Searching...",Toast.LENGTH_LONG).show()
+
+           }
+           R.id.favourite -> {
+//               val i = Intent(this,SearchActivity::class.java)
+//               startActivity(i)
+               Toast.makeText(this,"Favourite...",Toast.LENGTH_LONG).show()
+
+           }
+           R.id.logout -> {
+//               val i = Intent(this,SearchActivity::class.java)
+//               startActivity(i)
+               Toast.makeText(this,"Logout...",Toast.LENGTH_LONG).show()
+
+           }
+
+           else -> {
+
+           }
+       }
         return true
     }
+//     fun onOptionsItems(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.searching -> {
+//                val i = Intent(this, SearchActivity::class.java)
+//                startActivity(i)
+////               Toast.makeText(this,"Searching...",Toast.LENGTH_LONG).show()
+//
+//            }
 
 
+//        }
+//        return true
+//    }
 
 }
