@@ -1,10 +1,11 @@
 package com.example.farmhelp1
 
-//import androidx.R
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -42,6 +43,17 @@ class MainActivity : AppCompatActivity() {
         searchView.setOnClickListener {
             var imd = Intent(this, SearchActivity::class.java)
             startActivity(imd)
+        }
+
+
+        val fab: View = findViewById(R.id.floatingbtn)
+        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null)
+//                .show()
+            val chat = Intent(this,chatbotActivity2::class.java)
+            startActivity(chat)
+            finish()
         }
 
 //        val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
@@ -144,18 +156,6 @@ class MainActivity : AppCompatActivity() {
        }
         return true
     }
-//     fun onOptionsItems(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            R.id.searching -> {
-//                val i = Intent(this, SearchActivity::class.java)
-//                startActivity(i)
-////               Toast.makeText(this,"Searching...",Toast.LENGTH_LONG).show()
-//
-//            }
 
-
-//        }
-//        return true
-//    }
 
 }
