@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
+
+
+   <androidx.cardview.widget.CardView
+    android:id="@+id/Cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="150dp"
+    app:cardElevation="14dp">
+
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect"
+        android:inputType="text"
+        app:cardCornerRadius="16dp"
+        app:useDrawerArrowDrawable="true"
+
+        app:goIcon="@drawable/baseline_keyboard_voice_24"
+        app:voiceIcon="@drawable/baseline_keyboard_voice_24"
+        app:autoShowKeyboard="true"
+        app:iconifiedByDefault="false"
+
+        app:queryHint="Search here ..."
+        app:queryBackground="@android:color/transparent">
+    </androidx.appcompat.widget.SearchView>
+   </androidx.cardview.widget.CardView>
+    <ListView
+        android:id="@+id/Listview_searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp" />
+
+
+
+</LinearLayout>
