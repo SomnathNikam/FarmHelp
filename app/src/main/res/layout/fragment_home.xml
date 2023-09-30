@@ -16,39 +16,39 @@
     tools:context=".Fragments.Home">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/Cardview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="150dp"
-        app:cardElevation="14dp">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/Cardview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="10dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:cardCornerRadius="150dp"-->
+<!--        app:cardElevation="14dp">-->
 
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/inputbg"
-            android:inputType="text"
-            app:cardCornerRadius="16dp"
-            app:useDrawerArrowDrawable="true"
-            app:goIcon="@drawable/baseline_keyboard_voice_24"
-            app:voiceIcon="@drawable/baseline_keyboard_voice_24"
+<!--        <androidx.appcompat.widget.SearchView-->
+<!--            android:id="@+id/search_bar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/inputbg"-->
+<!--            android:inputType="text"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:useDrawerArrowDrawable="true"-->
+<!--            app:goIcon="@drawable/baseline_keyboard_voice_24"-->
+<!--            app:voiceIcon="@drawable/baseline_keyboard_voice_24"-->
 
-            app:iconifiedByDefault="false"
-            app:queryHint="Search here ..."
-            app:animateMenuItems="true"
-            app:autoShowKeyboard="false"
-            android:fitsSystemWindows="true"
-            android:nextFocusDown="@color/green"
+<!--            app:iconifiedByDefault="false"-->
+<!--            app:queryHint="Search here ..."-->
+<!--            app:animateMenuItems="true"-->
+<!--            app:autoShowKeyboard="false"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            android:nextFocusDown="@color/green"-->
 
-            app:queryBackground="@android:color/transparent">
+<!--            app:queryBackground="@android:color/transparent">-->
 
-        </androidx.appcompat.widget.SearchView>
+<!--        </androidx.appcompat.widget.SearchView>-->
 
-    </androidx.cardview.widget.CardView>
+<!--    </androidx.cardview.widget.CardView>-->
 
     <ListView
         android:id="@+id/Listview_searchbar"

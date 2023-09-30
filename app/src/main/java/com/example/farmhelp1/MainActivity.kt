@@ -7,9 +7,11 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.Fragments.Home
 import com.example.farmhelp1.Fragments.MyProfile
+import com.example.farmhelp1.Fragments.SearchActivity
 import com.example.farmhelp1.Fragments.info
 import com.example.farmhelp1.Fragments.schemes
 import com.example.farmhelp1.R.id.frmelayout
@@ -22,9 +24,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
@@ -34,7 +33,42 @@ class MainActivity : AppCompatActivity() {
 
         val floatingbtn = findViewById<FloatingActionButton>(R.id.floatingbtn)
 
+        val toolbar = findViewById<Toolbar>(R.id.actionBar)
+        setSupportActionBar(toolbar)
 
+        val searchView = toolbar.menu.findItem(R.id.searching).actionView as androidx.appcompat.widget.SearchView
+        searchView.queryHint = "Search..."
+
+        searchView.setOnClickListener {
+            var imd = Intent(this, SearchActivity::class.java)
+            startActivity(imd)
+        }
+
+//        val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
+//            "Jim","Russel","Donald","Brack","Vladimir")
+//          val listview= findViewById<ListView>(R.id.Listview_searchbar)
+//        val listAdapter: ArrayAdapter<String>
+//
+//        listAdapter= ArrayAdapter(
+//            this,
+//            android.R.layout.simple_list_item_1,
+//            list)
+//        listview.adapter=listAdapter
+//
+//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+//            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                // Perform search here
+//                listAdapter.filter.filter(query)
+//                return true
+//            }
+//
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                // Update search results here
+//                listAdapter.filter.filter(newText)
+//                return true
+//            }
+//        })
 //        val search = findViewById<Toolbar>(R.id.actionBar)
 //         search.setOnMenuItemClickListener {
 //             onCreateOptionsMenu(R.id.searching)
@@ -86,7 +120,7 @@ class MainActivity : AppCompatActivity() {
 
          when(item.itemId){
            R.id.searching -> {
-               val i = Intent(this,SearchActivity::class.java)
+               val i = Intent(this, SearchActivity::class.java)
                startActivity(i)
 //               Toast.makeText(this,"Searching...",Toast.LENGTH_LONG).show()
 
@@ -98,8 +132,8 @@ class MainActivity : AppCompatActivity() {
 
            }
            R.id.logout -> {
-//               val i = Intent(this,SearchActivity::class.java)
-//               startActivity(i)
+               val can = Intent(this,LogoutActivity::class.java)
+               startActivity(can)
                Toast.makeText(this,"Logout...",Toast.LENGTH_LONG).show()
 
            }

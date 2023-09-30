@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/actionBar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="?actionBarSize"
 
         android:layout_marginBottom="690dp"
 
@@ -37,17 +37,8 @@
         app:layout_constraintVertical_bias="1.0">
 
 
-        <!--        <Toolbar-->
-        <!--            android:id="@+id/actionBar"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:titleTextColor="@color/white"-->
-        <!--            android:clickable="true"-->
-        <!--            app:title="Farmhelp"-->
-        <!--            android:background="@drawable/rect"-->
-        <!--            android:layout_marginTop="10dp"-->
-        <!--            app:menu="@menu/custom_menu"-->
-        <!--            />-->
+
+
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
