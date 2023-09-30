@@ -24,6 +24,7 @@ class MyProfile : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        actionbar?.hide
 //        arguments?.let {
 //            param1 = it.getString(ARG_PARAM1)
 //            param2 = it.getString(ARG_PARAM2)
@@ -34,6 +35,7 @@ class MyProfile : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//        actionbar?.hide
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_about, container, false)
     }
