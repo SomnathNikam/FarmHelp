@@ -39,8 +39,8 @@
         <Button
             android:id="@+id/angry_btn"
 
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
             android:layout_marginTop="650dp"
             android:layout_marginLeft="300dp"
             android:background="@drawable/baseline_message_24"
@@ -50,7 +50,7 @@
             android:shadowRadius="25"
 
             android:textColor="#FFFCFC"
-            android:textSize="30sp"
+            android:textSize="22sp"
            />
 
 

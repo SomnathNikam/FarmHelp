@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -18,7 +18,7 @@ import com.example.farmhelp1.Fragments.schemes
 import com.example.farmhelp1.R.id.frmelayout
 import com.example.farmhelp1.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var  bottombar = findViewById<BottomNavigationView>(R.id.bottom_nav)
-
-        val floatingbtn = findViewById<FloatingActionButton>(R.id.floatingbtn)
+//
+//        val floatingbtn = findViewById<FloatingActionButton>(R.id.angry_btn)
 
         val toolbar = findViewById<Toolbar>(R.id.actionBar)
         setSupportActionBar(toolbar)
@@ -46,11 +46,11 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val fab: View = findViewById(R.id.floatingbtn)
+        val fab: Button= findViewById(R.id.angry_btn)
         fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null)
-//                .show()
+            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                .setAction("Action", null)
+                .show()
             val chat = Intent(this,chatbotActivity2::class.java)
             startActivity(chat)
             finish()
