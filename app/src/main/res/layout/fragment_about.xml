@@ -18,7 +18,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="150dp"
             android:src="@drawable/jjfb"/>
 
 
@@ -152,12 +152,13 @@
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/git"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="80dp"
-            android:src="@drawable/giphy" />
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+             />
 
 
     </LinearLayout>

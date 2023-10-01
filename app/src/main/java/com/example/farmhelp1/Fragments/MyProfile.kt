@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.farmhelp1.R
 import com.example.farmhelp1.ThankyouActivity
 
@@ -32,23 +33,36 @@ class MyProfile : Fragment() {
 
         // Inflate the layout for this fragment
 
-        val img = view?.findViewById<ImageView>(R.id.imageView2)
 
-        img?.setOnClickListener {
-            val i = Intent(activity,ThankyouActivity::class.java)
-            startActivity(i)
-        }
 
-         
-        return  return inflater.inflate(R.layout.fragment_about, container, false)
+
+
+
+        return   inflater.inflate(R.layout.fragment_about, container, false)
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+            requireActivity().actionBar?.hide()
+            var img = view.findViewById<ImageView>(R.id.git)
+
+            img.setOnClickListener {
+                val i = Intent(activity, ThankyouActivity::class.java)
+                startActivity(i)
+            }
+
+
+            Glide.with(this)
+                .asGif()
+                .load(R.drawable.giphy)
+                .into(img)
+
+
     }
 
-
-override fun onDestroyView() {
-    super.onDestroyView()
-
-    // Show the action bar when the Fragment is destroyed
-    requireActivity().actionBar?.show()
-}
+    override fun onDestroyView() {
+        super.onDestroyView()
+        requireActivity().actionBar?.show()
+    }
 
 }

@@ -27,7 +27,7 @@
             android:name=".ThankyouActivity"
             android:exported="false" />
         <activity
-            android:name=".RateUsActivity"
+            android:name=".ContactUsActivity"
             android:exported="false" />
         <activity
             android:name=".chatbotActivity2"

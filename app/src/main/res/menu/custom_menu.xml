@@ -10,8 +10,8 @@
 
         app:showAsAction="always"/>
     <item
-        android:id="@+id/Rateus"
-        android:title="Rate us"
+        android:id="@+id/Contactus"
+        android:title="Contact us"
         android:icon="@drawable/baseline_search_24"
 
        app:showAsAction="never"/>

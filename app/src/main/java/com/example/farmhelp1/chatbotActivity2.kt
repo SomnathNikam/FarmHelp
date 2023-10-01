@@ -12,7 +12,10 @@ class chatbotActivity2 : AppCompatActivity() {
 
         val backarrow = findViewById<ImageView>(R.id.img_back_arrow)
         backarrow.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            val i = Intent(this,MainActivity::class.java)
+            startActivity(i)
+            //or
+           // startActivity(Intent(this,MainActivity::class.java))
         }
     }
 }

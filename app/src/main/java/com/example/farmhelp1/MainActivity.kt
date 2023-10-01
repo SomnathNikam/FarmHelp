@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -18,6 +17,7 @@ import com.example.farmhelp1.Fragments.schemes
 import com.example.farmhelp1.R.id.frmelayout
 import com.example.farmhelp1.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.actionBar)
         setSupportActionBar(toolbar)
 
+
         val searchView = toolbar.menu.findItem(R.id.searching).actionView as androidx.appcompat.widget.SearchView
         searchView.queryHint = "Search..."
 
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val fab: Button= findViewById(R.id.angry_btn)
+        val fab: FloatingActionButton= findViewById(R.id.angry_btn)
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
                 .setAction("Action", null)
@@ -137,8 +138,8 @@ class MainActivity : AppCompatActivity() {
 //               Toast.makeText(this,"Searching...",Toast.LENGTH_LONG).show()
 
            }
-           R.id.Rateus -> {
-               val i = Intent(this,RateUsActivity::class.java)
+           R.id.Contactus -> {
+               val i = Intent(this,ContactUsActivity::class.java)
                startActivity(i)
                Toast.makeText(this,"Rate us 5 stars",Toast.LENGTH_LONG).show()
 
@@ -155,6 +156,19 @@ class MainActivity : AppCompatActivity() {
            }
        }
         return true
+    }
+    override fun onResume() {
+        super.onResume()
+
+        // Hide the toolbar when the fragment is resumed
+//        (Fragment as AppCompatActivity?)?.supportActionBar?.hide()
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        // Show the toolbar when the fragment is paused (e.g., going to another fragment)
+//        (activity as AppCompatActivity?)?.supportActionBar?.show()
     }
 
 

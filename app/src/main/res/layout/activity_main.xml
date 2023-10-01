@@ -36,40 +36,40 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <Button
-            android:id="@+id/angry_btn"
+<!--        <Button-->
+<!--            android:id="@+id/angry_btn"-->
 
-            android:layout_width="60dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="650dp"
-            android:layout_marginLeft="300dp"
-            android:background="@drawable/baseline_message_24"
-            android:shadowColor="#F10000"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="25"
-
-            android:textColor="#FFFCFC"
-            android:textSize="22sp"
-           />
-
-
-        <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--            android:id="@+id/floatingbtn"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="end"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="55dp"-->
 <!--            android:layout_marginTop="650dp"-->
-<!--            android:layout_marginRight="30dp"-->
-<!--            android:autofillHints="name"
+<!--            android:layout_marginLeft="300dp"-->
+<!--            android:background="@drawable/chatbot"-->
+<!--            android:shadowColor="#F10000"-->
+<!--            android:shadowDx="0"-->
+<!--            android:shadowDy="0"-->
+<!--            android:shadowRadius="25"-->
+
+<!--            android:textColor="#FFFCFC"-->
+<!--            android:textSize="22sp"-->
+<!--           />-->
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/angry_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="650dp"
+            android:layout_marginRight="30dp"
+           android:autofillHints="name"
                 android:focusable="true"
                 android:clickable="true"
                  android:scaleType="center"
-                android:backgroundTint="@color/cyan"-->
-<!--            app:fabSize="normal"-->
-<!--            android:clickable="true"-->
-<!--            android:contentDescription="@string/Submit"-->
-<!--            app:srcCompat="@drawable/baseline_message_24" />-->
+                android:backgroundTint="#F10000"
+        app:fabSize="normal"
+
+            android:contentDescription="@string/Submit"
+            app:srcCompat="@drawable/chatbot" />
 
 
     </FrameLayout>
