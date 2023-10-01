@@ -137,10 +137,10 @@ class MainActivity : AppCompatActivity() {
 //               Toast.makeText(this,"Searching...",Toast.LENGTH_LONG).show()
 
            }
-           R.id.favourite -> {
-//               val i = Intent(this,SearchActivity::class.java)
-//               startActivity(i)
-               Toast.makeText(this,"Favourite...",Toast.LENGTH_LONG).show()
+           R.id.Rateus -> {
+               val i = Intent(this,RateUsActivity::class.java)
+               startActivity(i)
+               Toast.makeText(this,"Rate us 5 stars",Toast.LENGTH_LONG).show()
 
            }
            R.id.logout -> {
