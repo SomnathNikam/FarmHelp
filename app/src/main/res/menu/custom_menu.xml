@@ -23,7 +23,7 @@
         app:showAsAction="never"/>
     <item
         android:id="@+id/share"
-        android:title="Share"
+        android:title="Settings"
         android:icon="@drawable/baseline_search_24"
 
         app:showAsAction="never">

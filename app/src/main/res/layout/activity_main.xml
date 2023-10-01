@@ -61,7 +61,11 @@
 <!--            android:layout_gravity="end"-->
 <!--            android:layout_marginTop="650dp"-->
 <!--            android:layout_marginRight="30dp"-->
-<!--            android:backgroundTint="@color/cyan"-->
+<!--            android:autofillHints="name"
+                android:focusable="true"
+                android:clickable="true"
+                 android:scaleType="center"
+                android:backgroundTint="@color/cyan"-->
 <!--            app:fabSize="normal"-->
 <!--            android:clickable="true"-->
 <!--            android:contentDescription="@string/Submit"-->
