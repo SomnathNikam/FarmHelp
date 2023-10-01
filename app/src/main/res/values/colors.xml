@@ -24,7 +24,9 @@
 
     <color name="indigo">#3F51B5</color>
 
-
+    <color name="shadowAccent">#ffF44B74</color>
+    <color name="btcolor">#ffF44B74</color>
+    <color name="lightgreen">#C2F1A5</color>
 
     // samples
     <color name="sample1">#28EA00</color>
