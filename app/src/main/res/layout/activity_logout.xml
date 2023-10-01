@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".LogoutActivity">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/angry_btn"
+
+        android:layout_width="170dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="300dp"
+
+        android:background="@drawable/baseline_message_24"
+        android:shadowColor="#F10000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="25"
+
+        android:textColor="#FFFCFC"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
