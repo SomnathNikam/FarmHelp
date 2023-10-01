@@ -51,7 +51,9 @@
 
 <!--            android:textColor="#FFFCFC"-->
 <!--            android:textSize="22sp"-->
-<!--           />-->
+       <!-- /> -->
+<!--        android:backgroundTint="#F10000"-->
+
 
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -65,7 +67,7 @@
                 android:focusable="true"
                 android:clickable="true"
                  android:scaleType="center"
-                android:backgroundTint="#F10000"
+                android:backgroundTint="#FFFCFC"
         app:fabSize="normal"
 
             android:contentDescription="@string/Submit"
