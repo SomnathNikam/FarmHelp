@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.ListView
+import android.widget.SearchView
 import androidx.fragment.app.Fragment
-import com.example.farmhelp1.databinding.FragmentInfoBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
@@ -19,8 +21,10 @@ import com.example.farmhelp1.databinding.FragmentInfoBinding
 class info : Fragment() {
     //
 
-    private var _binding:FragmentInfoBinding? =null
-    private val binding get() = _binding!!
+    private lateinit var searchView: SearchView
+    private lateinit var listView: ListView
+    private lateinit var adapter: ArrayAdapter<String>
+
 
 
 
@@ -28,10 +32,16 @@ class info : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//
 
-        _binding = FragmentInfoBinding.inflate(inflater,container,false)
-     // Start from here
-        requireActivity().actionBar?.hide()
-    return binding.root
+        return  null
+    }
+
+    private fun generateData(): List<String> {
+        val data = mutableListOf<String>()
+        for (i in 1..50) {
+            data.add("Item $i")
+        }
+        return data
     }
 }

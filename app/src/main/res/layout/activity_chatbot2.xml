@@ -1,102 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+
+<!--    tools:context=".chatbotActivity2">-->
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?actionBarSize"-->
+<!--        android:background="@drawable/rect"-->
+<!--     >-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:id="@+id/ll3"-->
+<!--            >-->
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/img_back_arrow"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:src="@drawable/baseline_arrow_back_ios_new_24"-->
+<!--                android:visibility="visible"-->
+
+<!--                tools:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="FarmHelp"-->
+<!--                android:textSize="27sp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--               android:textColor="@color/white"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/ll1"-->
+<!--        android:layout_marginTop="750dp"-->
+<!--        android:background="@color/light_gray"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/round_button1">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="342dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/round_button1"-->
+<!--                android:hint="Enter your query here"-->
+<!--                android:lines="10"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="20sp" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_send"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="90dp"-->
+<!--            android:paddingBottom="30dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/baseline_send_24"-->
+<!--            android:visibility="visible" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_messages"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignTop="@+id/ll1"-->
+<!--        android:layout_marginTop="-690dp"-->
+<!--        android:layout_marginBottom="100dp"-->
+
+<!--        tools:itemCount="20"-->
+<!--        tools:listitem="@layout/message_item" />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="10dp"-->
+<!--        android:background="#42A5F5"-->
+<!--        android:id="@+id/dark_divider"/>-->
+
+<!--</RelativeLayout>-->
+
+
+<!-- Chatgpt code -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
-    tools:context=".chatbotActivity2">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@drawable/rect"
-     >
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray"
+        android:padding="16dp"
+        android:scrollbars="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/conversationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/ll3"
-            >
+            android:textColor="@android:color/white" />
 
+    </ScrollView>
 
-            <ImageView
-                android:id="@+id/img_back_arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/baseline_arrow_back_ios_new_24"
-                android:visibility="visible"
-
-                tools:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FarmHelp"
-                android:textSize="27sp"
-                android:layout_marginTop="12dp"
-                android:layout_marginLeft="10dp"
-               android:textColor="@color/white"
-                />
-        </LinearLayout>
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/userInputEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ll1"
-        android:layout_marginTop="750dp"
-        android:background="@color/light_gray"
-        android:orientation="horizontal">
+        android:layout_weight="1"
+        android:hint="Type a message..."
+        android:inputType="text"
+        android:maxLines="1" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-
-            android:layout_weight="1"
-            android:background="@drawable/round_button1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="342dp"
-                android:layout_height="60dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_button1"
-                android:hint="Enter your query here"
-                android:lines="10"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <ImageView
-            android:id="@+id/img_send"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            android:paddingBottom="30dp"
-            android:layout_weight="1"
-            android:src="@drawable/baseline_send_24"
-            android:visibility="visible" />
+<Button
+android:id="@+id/sendButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Send" />
 
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_messages"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignTop="@+id/ll1"
-        android:layout_marginTop="-690dp"
-        android:layout_marginBottom="100dp"
-
-        tools:itemCount="20"
-        tools:listitem="@layout/message_item" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#42A5F5"
-        android:id="@+id/dark_divider"/>
-
-</RelativeLayout>

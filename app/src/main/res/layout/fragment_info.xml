@@ -8,34 +8,46 @@
     android:id="@+id/info"
     tools:context=".Fragments.info">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/Cardview"
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/Cardview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="10dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        app:cardCornerRadius="150dp"-->
+
+<!--        app:cardElevation="14dp">-->
+
+
+<!--    <SearchView-->
+<!--        android:id="@+id/search_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/inputbg"-->
+<!--        android:inputType="text"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:clickable="true"-->
+<!--        app:useDrawerArrowDrawable="true"-->
+<!--        app:goIcon="@drawable/baseline_keyboard_voice_24"-->
+<!--        app:voiceIcon="@drawable/baseline_keyboard_voice_24"-->
+<!--        app:autoShowKeyboard="true"-->
+<!--        app:iconifiedByDefault="false"-->
+<!--        app:queryBackground="@android:color/transparent"-->
+<!--        app:queryHint="Search here ...">-->
+
+<!--    </SearchView>-->
+<!--    </androidx.cardview.widget.CardView>-->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="150dp"
+        android:layout_marginTop="120dp"/>
 
-        app:cardElevation="14dp">
-
-
-    <SearchView
-        android:id="@+id/search_bar"
+    <ListView
+        android:id="@+id/listViewing"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/inputbg"
-        android:inputType="text"
-        app:cardCornerRadius="10dp"
-        android:layout_marginTop="30dp"
-        app:useDrawerArrowDrawable="true"
-        app:goIcon="@drawable/baseline_keyboard_voice_24"
-        app:voiceIcon="@drawable/baseline_keyboard_voice_24"
-        app:autoShowKeyboard="true"
-        app:iconifiedByDefault="false"
-        app:queryBackground="@android:color/transparent"
-        app:queryHint="Search here ...">
-
-    </SearchView>
-    </androidx.cardview.widget.CardView>
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </FrameLayout>
