@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+
     tools:context=".chatbotActivity2">
 
     <androidx.appcompat.widget.Toolbar
@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:id="@+id/ll3"
             >
 
 
@@ -47,7 +48,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="700dp"
+        android:id="@+id/ll1"
+        android:layout_marginTop="750dp"
         android:background="@color/light_gray"
         android:orientation="horizontal">
 
@@ -80,4 +82,21 @@
 
     </LinearLayout>
 
-</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/ll1"
+        android:layout_marginTop="-690dp"
+        android:layout_marginBottom="100dp"
+
+        tools:itemCount="20"
+        tools:listitem="@layout/message_item" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#42A5F5"
+        android:id="@+id/dark_divider"/>
+
+</RelativeLayout>
