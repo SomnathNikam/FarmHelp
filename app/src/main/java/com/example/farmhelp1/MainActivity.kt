@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.Fragments.Home
@@ -29,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
+
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
 
         var  bottombar = findViewById<BottomNavigationView>(R.id.bottom_nav)
 //
@@ -148,6 +151,14 @@ class MainActivity : AppCompatActivity() {
                val can = Intent(this,LogoutActivity::class.java)
                startActivity(can)
                Toast.makeText(this,"Logout...",Toast.LENGTH_LONG).show()
+
+           }
+           R.id.dark_mode -> {
+               AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+
+           }
+           R.id.light_mode -> {
+               AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
            }
 

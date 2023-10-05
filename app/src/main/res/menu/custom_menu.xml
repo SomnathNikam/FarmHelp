@@ -30,13 +30,13 @@
 
         <menu>
             <item
-                android:id="@+id/whatsapp"
-                android:title="whatsapp"
+                android:id="@+id/dark_mode"
+                android:title="Dark Mode"
                 app:showAsAction="never"
                 ></item>
             <item
-                android:id="@+id/instagram"
-                android:title="Instagram"
+                android:id="@+id/light_mode"
+                android:title="Light Mode"
                 app:showAsAction="never"
                 ></item>
         </menu>
