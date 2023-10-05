@@ -132,55 +132,60 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean{
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-         when(item.itemId){
-           R.id.searching -> {
-               val i = Intent(this, SearchActivity::class.java)
-               startActivity(i)
+        when (item.itemId) {
+            R.id.searching -> {
+                val i = Intent(this, SearchActivity::class.java)
+                startActivity(i)
 //               Toast.makeText(this,"Searching...",Toast.LENGTH_LONG).show()
 
-           }
-           R.id.Contactus -> {
-               val i = Intent(this,ContactUsActivity::class.java)
-               startActivity(i)
-               Toast.makeText(this,"Rate us 5 stars",Toast.LENGTH_LONG).show()
+            }
 
-           }
-           R.id.logout -> {
-               val can = Intent(this,LogoutActivity::class.java)
-               startActivity(can)
-               Toast.makeText(this,"Logout...",Toast.LENGTH_LONG).show()
+            R.id.Contactus -> {
+                val i = Intent(this, ContactUsActivity::class.java)
+                startActivity(i)
+                
 
-           }
+            }
+
+            R.id.logout -> {
+                val can = Intent(this, LogoutActivity::class.java)
+                startActivity(can)
+                Toast.makeText(this, "Logout...", Toast.LENGTH_LONG).show()
+
+            }
            R.id.dark_mode -> {
                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-
            }
            R.id.light_mode -> {
                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
            }
 
-           else -> {
 
-           }
-       }
-        return true
+
+            else -> {
+
+            }
+
+        }
+            return true
+
     }
-    override fun onResume() {
-        super.onResume()
+        override fun onResume() {
+            super.onResume()
 
-        // Hide the toolbar when the fragment is resumed
+            // Hide the toolbar when the fragment is resumed
 //        (Fragment as AppCompatActivity?)?.supportActionBar?.hide()
-    }
+        }
 
-    override fun onPause() {
-        super.onPause()
+        override fun onPause() {
+            super.onPause()
 
-        // Show the toolbar when the fragment is paused (e.g., going to another fragment)
+            // Show the toolbar when the fragment is paused (e.g., going to another fragment)
 //        (activity as AppCompatActivity?)?.supportActionBar?.show()
+        }
+
+
     }
 
-
-}

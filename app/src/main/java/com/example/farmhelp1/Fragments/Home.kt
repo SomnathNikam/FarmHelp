@@ -50,47 +50,47 @@ class Home : Fragment() {
         val views = inflater!!.inflate(R.layout.fragment_home,container,false)
 //    _binding = FragmentHomeBinding.inflate(inflater,container,false)
 
-
-        val listView1 = view?.findViewById<ListView>(R.id.Listview_searchbar)
-        var searchBar = view?.findViewById<SearchView>(R.id.search_bar)
-        var homeBinding =view?.findViewById<ConstraintLayout>(R.id.fragment_home)
-        var frame = view?.findViewById<FrameLayout>(R.id.home)
-        var card = view?.findViewById<CardView>(R.id.Cardview)
-
-
-        val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
-            "Jim","Russel","Donald","Brack","Vladimir")
-
-
-
-        var listAdapter: ArrayAdapter<*>
-
-        listAdapter= ArrayAdapter(
-           requireContext(),
-            android.R.layout.simple_list_item_1,
-            list)
-
-            listView1?.adapter=listAdapter
-
-//          _binding?.ListviewSearchbar?.adapter= listAdapter
-
-       searchBar?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(p0: String?): Boolean {
-                searchBar.requestFocus()
-
-                        listAdapter.filter.filter(p0)
-
-
-                return true
-            }
-
-
-            override fun onQueryTextChange(p0:String?): Boolean {
-
-                listAdapter.filter.filter(p0)
-                return true
-            }
-        })
+//
+//        val listView1 = view?.findViewById<ListView>(R.id.Listview_searchbar)
+//        var searchBar = view?.findViewById<SearchView>(R.id.search_bar)
+//        var homeBinding =view?.findViewById<ConstraintLayout>(R.id.fragment_home)
+//        var frame = view?.findViewById<FrameLayout>(R.id.home)
+//        var card = view?.findViewById<CardView>(R.id.Cardview)
+//
+//
+//        val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
+//            "Jim","Russel","Donald","Brack","Vladimir")
+//
+//
+//
+//        var listAdapter: ArrayAdapter<*>
+//
+//        listAdapter= ArrayAdapter(
+//           requireContext(),
+//            android.R.layout.simple_list_item_1,
+//            list)
+//
+//            listView1?.adapter=listAdapter
+//
+////          _binding?.ListviewSearchbar?.adapter= listAdapter
+//
+//       searchBar?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+//            override fun onQueryTextSubmit(p0: String?): Boolean {
+//                searchBar.requestFocus()
+//
+//                        listAdapter.filter.filter(p0)
+//
+//
+//                return true
+//            }
+//
+//
+//            override fun onQueryTextChange(p0:String?): Boolean {
+//
+//                listAdapter.filter.filter(p0)
+//                return true
+//            }
+//        })
 
 //
 //
@@ -128,7 +128,51 @@ class Home : Fragment() {
 
 
 
-        return homeBinding?.rootView
+        return view
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        val listView1 = view?.findViewById<ListView>(R.id.Listview_searchbar)
+        var searchBar = view?.findViewById<SearchView>(R.id.search_bar)
+        var homeBinding =view?.findViewById<ConstraintLayout>(R.id.fragment_home)
+        var frame = view?.findViewById<FrameLayout>(R.id.home)
+        var card = view?.findViewById<CardView>(R.id.Cardview)
+
+
+        val list = listOf("Abhay","Joseph","Haria","Avni","Apoorva","Chris","Dravid","Kaira","Dwayne","Christoper",
+            "Jim","Russel","Donald","Brack","Vladimir")
+
+
+
+        var listAdapter: ArrayAdapter<*>
+
+        listAdapter= ArrayAdapter(
+            requireContext(),
+            android.R.layout.simple_list_item_1,
+            list)
+
+        listView1?.adapter=listAdapter
+
+//          _binding?.ListviewSearchbar?.adapter= listAdapter
+
+        searchBar?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                searchBar.requestFocus()
+
+                listAdapter.filter.filter(p0)
+
+
+                return true
+            }
+
+
+            override fun onQueryTextChange(p0:String?): Boolean {
+
+                listAdapter.filter.filter(p0)
+                return true
+            }
+        })
+
+    }
 }
