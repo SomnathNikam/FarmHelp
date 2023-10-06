@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Sunrise Field-->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="rectangle">-->
+
+<!--    <gradient-->
+<!--        android:startColor="#FF6F61"-->
+<!--        android:endColor="#FFD700"-->
+<!--        android:angle="45" />-->
+<!--</shape>-->
+
+<!--Verdant Greens-->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:shape="rectangle">-->
+
+<!--<gradient-->
+<!--    android:startColor="#32CD32"-->
+<!--    android:endColor="#228B22"-->
+<!--    android:angle="45" />-->
+<!--</shape>-->
+
+<!--Harvest Gold -->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:shape="rectangle">-->
+
+<!--<gradient-->
+<!--    android:startColor="#32CD32"-->
+<!--    android:endColor="#228B22"-->
+<!--    android:angle="45" />-->
+<!--</shape>-->
+
+    <!--Dusk on the Farm -->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:shape="rectangle">-->
+
+<!--<gradient-->
+<!--    android:startColor="#8A2BE2 "-->
+<!--    android:endColor="#FF6347"-->
+<!--    android:angle="45" />-->
+<!--</shape>-->
+
+    <!--Meadows Green -->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:shape="rectangle">-->
+
+<!--<gradient-->
+<!--    android:startColor="#3CB371"-->
+<!--    android:endColor="#228B22"-->
+<!--    android:angle="45" />-->
+<!--</shape>-->
+
+    <!--Country Side calm -->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:shape="rectangle">-->
+
+<!--<gradient-->
+<!--    android:startColor="#87CEFA "-->
+<!--    android:endColor="#FFD700"-->
+<!--    android:angle="45" />-->
+<!--</shape>-->
+
+    <!--Autumn Harvest -->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:shape="rectangle">-->
+
+<!--<gradient-->
+<!--    android:startColor="#FFA500"-->
+<!--    android:endColor="#8B4513"-->
+<!--    android:angle="45" />-->
+<!--</shape>-->
+
+<!--Rusting Earth Tones -->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:shape="rectangle">-->
+
+<!--<gradient-->
+<!--    android:startColor="#CD853F"-->
+<!--    android:endColor="#8B4513"-->
+<!--    android:angle="45" />-->
+<!--</shape>-->
+
+    <!--Golden Fields -->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:shape="rectangle">-->
+
+<!--<gradient-->
+<!--    android:startColor="#DAA520"-->
+<!--    android:endColor="#FFD700 "-->
+<!--    android:angle="45" />-->
+<!--</shape>-->
+
+<!--Azure Sky Overgreen fields-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+android:shape="rectangle">
+
+<gradient
+    android:startColor="#87CEFA"
+    android:endColor="#32CD32"
+    android:angle="45" />
+</shape>
