@@ -1,10 +1,8 @@
 package com.example.farmhelp1
 
 import android.content.Intent
-import android.content.Intent.ACTION_CALL
 import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -21,7 +19,7 @@ class ContactUsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_us)
 
-        nameEditText = findViewById(R.id.nameEditText)
+        nameEditText = findViewById(R.id.etName)
         emailEditText = findViewById(R.id.emailEditText)
         messageEditText = findViewById(R.id.messageEditText)
         submitButton = findViewById(R.id.submitButton)
@@ -33,24 +31,49 @@ class ContactUsActivity : AppCompatActivity() {
 
             // Handle form submission logic here (e.g., send an email, save to a database, etc.)
 
-            // Display a confirmation message
-            Toast.makeText(
-                this,
-                "Form submitted!We will contact you in shortly",
-                Toast.LENGTH_SHORT
-            ).show()
-            callus()
+            if (name.isEmpty() || email.isEmpty() || message.isEmpty()) {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }else{
 
-        }
 
-         fun callus(){
+                    sendEmail()
 
-            val intent = Intent().apply {
-                action = ACTION_CALL
-                data = Uri.parse("tel: 9975845368")
+//                callUs()
+
+
+                Toast.makeText(this, "Message sent! We will reply you in Shortly", Toast.LENGTH_SHORT).show()
             }
-            startActivity(intent)
+
+
+//            callus()
+
         }
+
+//         fun callus(){
+//
+//            val intent = Intent().apply {
+//                action = ACTION_CALL
+//                data = Uri.parse("tel: 9975845368")
+//            }
+//            startActivity(intent)
+//        }
+    }
+
+//    private fun callUs() {
+//        val intent = Intent().apply {
+//                action = ACTION_CALL
+//                data = Uri.parse("tel: ")
+//            }
+//            startActivity(intent)
+//    }
+
+    private fun sendEmail() {
+           val emailIntent = Intent(Intent.ACTION_SENDTO)
+            emailIntent.data = Uri.parse("mailto:hhht5984@gmail.com")
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT,"Contact Us Inquiry")
+
+            emailIntent.putExtra(Intent.EXTRA_TEXT,"Hello,\n\nI have a question:")
+            startActivity(Intent.createChooser(emailIntent,"Send Email"))
     }
 }
 

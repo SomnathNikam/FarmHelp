@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
+    android:orientation="vertical"
     tools:context=".chatbotActivity2">
 
     <androidx.appcompat.widget.Toolbar
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@drawable/rect"
-     >
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,7 +40,7 @@
                 android:textSize="27sp"
                 android:layout_marginTop="12dp"
                 android:layout_marginLeft="10dp"
-               android:textColor="@color/white"
+                android:textColor="@color/white"
                 />
         </LinearLayout>
 
@@ -54,19 +55,20 @@
         android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="60dp"
+           android:layout_marginBottom="200"
 
-            android:layout_weight="1"
             android:background="@drawable/round_button1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="342dp"
-                android:layout_height="60dp"
-                android:layout_weight="1"
+                android:layout_height="70dp"
+
                 android:background="@drawable/round_button1"
                 android:hint="Enter your query here"
                 android:lines="10"
+                android:keyboardNavigationCluster="true"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -87,8 +89,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignTop="@+id/ll1"
-        android:layout_marginTop="-690dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="-780dp"
+        android:layout_marginBottom="80dp"
 
         tools:itemCount="20"
         tools:listitem="@layout/message_item" />
@@ -99,8 +101,7 @@
         android:background="#42A5F5"
         android:id="@+id/dark_divider"/>
 
-</RelativeLayout>
-
+</LinearLayout>
 
 <!-- Chatgpt code -->
 <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->

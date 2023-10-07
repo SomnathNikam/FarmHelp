@@ -2,18 +2,15 @@ package com.example.farmhelp1
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class chatbotActivity2 : AppCompatActivity() {
 
 
-    private lateinit var conversationTextView: TextView
-    private lateinit var userInputEditText: EditText
-    private lateinit var sendButton: Button
+//    private lateinit var conversationTextView: TextView
+//    private lateinit var userInputEditText: EditText
+//    private lateinit var sendButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

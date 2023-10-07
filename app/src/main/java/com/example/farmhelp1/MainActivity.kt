@@ -2,6 +2,7 @@ package com.example.farmhelp1
 
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import androidx.browser.trusted.ScreenOrientation
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.Fragments.Home
 import com.example.farmhelp1.Fragments.MyProfile
@@ -20,12 +22,13 @@ import com.example.farmhelp1.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.UserInfo
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+//    private lateinit var user:ScreenOrientation
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
@@ -37,6 +40,12 @@ class MainActivity : AppCompatActivity() {
 //        window.attributes = window.attributes.also {
 //            it.screenBrightness= 1f
 //        }
+//        if(requestedOrientation.equals("porttait")){
+//            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+//        }else{
+//            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+//        }
+
 
         var  bottombar = findViewById<BottomNavigationView>(R.id.bottom_nav)
 //
