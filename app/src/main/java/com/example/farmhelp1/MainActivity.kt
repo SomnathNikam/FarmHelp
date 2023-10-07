@@ -33,6 +33,11 @@ class MainActivity : AppCompatActivity() {
 
 //        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
 
+        // Screen Brightness
+//        window.attributes = window.attributes.also {
+//            it.screenBrightness= 1f
+//        }
+
         var  bottombar = findViewById<BottomNavigationView>(R.id.bottom_nav)
 //
 //        val floatingbtn = findViewById<FloatingActionButton>(R.id.angry_btn)

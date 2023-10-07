@@ -1,6 +1,10 @@
 package com.example.farmhelp1
 
+import android.content.Intent
+import android.content.Intent.ACTION_CALL
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -30,7 +34,22 @@ class ContactUsActivity : AppCompatActivity() {
             // Handle form submission logic here (e.g., send an email, save to a database, etc.)
 
             // Display a confirmation message
-            Toast.makeText(this, "Form submitted!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                "Form submitted!We will contact you in shortly",
+                Toast.LENGTH_SHORT
+            ).show()
+            callus()
+
+        }
+
+         fun callus(){
+
+            val intent = Intent().apply {
+                action = ACTION_CALL
+                data = Uri.parse("tel: 9975845368")
+            }
+            startActivity(intent)
         }
     }
 }
