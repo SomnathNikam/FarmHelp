@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
             val Animation = AnimationUtils.loadAnimation(this,R.anim.fade_in)
             binding.farmlogo.startAnimation(Animation)
 
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,SplashAnimActivity3::class.java))
             finish()
         },4000)
 
