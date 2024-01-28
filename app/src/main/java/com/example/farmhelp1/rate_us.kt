@@ -14,8 +14,14 @@ class rate_us : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView)
 
         rateUs.setOnRatingBarChangeListener { ratingBar, fl, b ->
-            textView.setText("Rating Value : $ratingBar")
+            textView.setText("Rating Value : $rateUs")
         }
+//        rateUs.setOnRatingBarChangeListener { ratingBar, fl, b ->
+//            textView.setText("Rating Value : "+ratingBar)
+//        }
+//
+//        rateUs.setIsIndicator(false)
+
 
 
     }

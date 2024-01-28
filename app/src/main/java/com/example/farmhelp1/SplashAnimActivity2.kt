@@ -12,7 +12,7 @@ class SplashAnimActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_splash_anim2)
        // val lottieAnimationView = findViewById<LottieAnimationView>(R.id.splashanim)
         Handler(Looper.getMainLooper()).postDelayed(Runnable {  startActivity(Intent(
-            this,LoginActivity::class.java)
+            this,MainActivity::class.java)
         )
             finish() },3000)
 

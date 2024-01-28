@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".rate_us">
 
-    <RatingBar
+    <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/rate_us"
-        android:layout_width="277dp"
-        android:layout_height="65dp"
+        android:layout_width="246dp"
+        android:layout_height="48dp"
         android:max="5"
         android:orientation="horizontal"
         android:progressTint="@color/teal_200"
