@@ -43,6 +43,11 @@
                 android:title="Light Mode"
                 app:showAsAction="never"
                 ></item>
+            <item
+                android:id="@+id/rate_us"
+                android:title="Rate Us"
+                app:showAsAction="never"
+                ></item>
         </menu>
 
 

@@ -176,6 +176,12 @@ class MainActivity : AppCompatActivity() {
                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
            }
 
+           R.id.rate_us -> {
+               val i = Intent(this,Rate_Us::class.java)
+               startActivity(i)
+               finish()
+           }
+
 
 
             else -> {
