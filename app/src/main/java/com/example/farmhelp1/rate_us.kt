@@ -11,10 +11,12 @@ class rate_us : AppCompatActivity() {
         setContentView(R.layout.activity_rate_us)
 
         val rateUs = findViewById<RatingBar>(R.id.rate_us)
-        val textView = findViewById<TextView>(R.id.textView)
+        val ratingtext = findViewById<TextView>(R.id.textView)
 
-        rateUs.setOnRatingBarChangeListener { ratingBar, fl, b ->
-            textView.setText("Rating Value : $rateUs")
+        rateUs.setOnRatingBarChangeListener { ratingBar,_,_ ->
+//            textView.setText("Rating Value : $rateUs")
+//            return@setOnRatingBarChangeListener
+            ratingtext.text = "Rating: $ratingBar"
         }
 //        rateUs.setOnRatingBarChangeListener { ratingBar, fl, b ->
 //            textView.setText("Rating Value : "+ratingBar)

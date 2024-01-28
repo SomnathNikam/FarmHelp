@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".rate_us">
 
-    <androidx.appcompat.widget.AppCompatRatingBar
+    <RatingBar
         android:id="@+id/rate_us"
         android:layout_width="246dp"
         android:layout_height="48dp"
