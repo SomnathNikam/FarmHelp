@@ -2,7 +2,6 @@ package com.example.farmhelp1
 
 
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
-import androidx.browser.trusted.ScreenOrientation
 import androidx.fragment.app.Fragment
 import com.example.farmhelp1.Fragments.Home
 import com.example.farmhelp1.Fragments.MyProfile
@@ -22,7 +20,6 @@ import com.example.farmhelp1.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.auth.UserInfo
 
 
 class MainActivity : AppCompatActivity() {
@@ -177,7 +174,7 @@ class MainActivity : AppCompatActivity() {
            }
 
            R.id.rate_us -> {
-               val i = Intent(this,Rate_Us::class.java)
+               val i = Intent(this,rate_us::class.java)
                startActivity(i)
                finish()
            }

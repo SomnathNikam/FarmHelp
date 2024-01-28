@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Rate_Us">
+    tools:context=".rate_us">
 
     <RatingBar
         android:id="@+id/rate_us"
